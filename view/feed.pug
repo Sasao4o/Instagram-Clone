@@ -1,0 +1,122 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Feed | Vietgram
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='css/styles.css')
+nav.navigation
+  .navigation__column
+    a(href='home')
+      // Master branch comment
+      img(src='images/logo.png')
+  .navigation__column
+    i.fa.fa-search
+    input(type='text' placeholder='Search')
+  .navigation__column
+    ul.navigations__links
+      li.navigation__list-item
+        a.navigation__link(href='explore.html')
+          i.fa.fa-compass.fa-lg
+      li.navigation__list-item
+        a.navigation__link(href='#')
+          i.fa.fa-heart-o.fa-lg
+      li.navigation__list-item
+        a.navigation__link(href='profile')
+          i.fa.fa-user-o.fa-lg
+script.
+  var posts= !{JSON.stringify(posts)};
+  var user = !{JSON.stringify(user)};
+main#feed   
+//-  each v in posts 
+//-   .photo
+//-     header.photo__header
+//-       img.photo__avatar(src='images/avatar.jpg')
+//-       .photo__user-info
+//-         span.photo__author inthetiger
+//-         span.photo__location Bestechung
+//-     img(src='images/feedPhoto.jpg')
+//-     .photo__info
+//-       .photo__actions
+//-         span.photo__action
+//-           i.fa.fa-heart-o.fa-lg
+//-         span.photo__action
+//-           i.fa.fa-comment-o.fa-lg
+//-       span.photo__likes v.likes.length  likes
+//-       ul.photo__comments
+//-         li.photo__comment
+//-           span.photo__comment-author serranoarevalo
+//-           |  love this!
+//-         li.photo__comment
+//-           span.photo__comment-author serranoarevalo
+//-           |  love this!
+//-         li.photo__comment
+//-           span.photo__comment-author serranoarevalo
+//-           |  love this!
+//-         li.photo__comment
+//-           span.photo__comment-author serranoarevalo
+//-           |  love this!
+//-       span.photo__time-ago 2 hours ago
+//-       .photo__add-comment-container
+//-         textarea(name='comment' placeholder='Add a comment...')
+//-         i.fa.fa-ellipsis-h
+  //- .photo
+  //-   header.photo__header
+  //-     img.photo__avatar(src='images/avatar.jpg')
+  //-     .photo__user-info
+  //-       span.photo__author inthetiger
+  //-       span.photo__location Bestechung
+  //-   img(src='images/feedPhoto.jpg')
+  //-   .photo__info
+  //-     .photo__actions
+  //-       span.photo__action
+  //-         i.fa.fa-heart-o.fa-lg
+  //-       span.photo__action
+  //-         i.fa.fa-comment-o.fa-lg
+  //-     span.photo__likes 45 likes
+  //-     ul.photo__comments
+  //-       li.photo__comment
+  //-         span.photo__comment-author serranoarevalo
+  //-         |  love this!
+  //-       li.photo__comment
+  //-         span.photo__comment-author serranoarevalo
+  //-         |  love this!
+  //-       li.photo__comment
+  //-         span.photo__comment-author serranoarevalo
+  //-         |  love this!
+  //-       li.photo__comment
+  //-         span.photo__comment-author serranoarevalo
+  //-         |  love this!
+  //-     span.photo__time-ago 2 hours ago
+  //-     .photo__add-comment-container
+  //-       textarea(name='comment' placeholder='Add a comment...')
+  //-       i.fa.fa-ellipsis-h
+footer.footer
+  .footer__column
+    nav.footer__nav
+      ul.footer__list
+        li.footer__list-item
+          a.footer__link(href='#') About Us
+        li.footer__list-item
+          a.footer__link(href='#') Support
+        li.footer__list-item
+          a.footer__link(href='#') Blog
+        li.footer__list-item
+          a.footer__link(href='#') Press
+        li.footer__list-item
+          a.footer__link(href='#') Api
+        li.footer__list-item
+          a.footer__link(href='#') Jobs
+        li.footer__list-item
+          a.footer__link(href='#') Privacy
+        li.footer__list-item
+          a.footer__link(href='#') Terms
+        li.footer__list-item
+          a.footer__link(href='#') Directory
+        li.footer__list-item
+          a.footer__link(href='#') Language
+  .footer__column
+    span.footer__copyright &copy; 2017 Vietgram
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/home.js"></script>

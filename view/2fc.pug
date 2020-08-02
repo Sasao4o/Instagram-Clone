@@ -1,0 +1,56 @@
+style.
+  div.container {
+  padding:10px;
+  width:500px;
+  margin:auto;
+  }
+  form {
+  border:1px solid #EEE;
+  width:400px;
+  padding:10px;
+  margin:10px;
+  margin:auto
+  }
+  img {
+  display:block;
+  margin:auto
+  }
+  form input {
+  display:block;
+  margin:10px auto;
+  padding:5px;
+  border-radius:10px;
+  color:black;
+  }
+  form input[type="submit"] {
+  border-radius:2px;
+  width:130px;
+  background-color:#EEE;
+  cursor:pointer;
+  } 
+ .validation {
+      color:red;
+      padding:10px;
+      font-weight:bold;
+      letter-spacing:1px;
+      display:block;
+      margin:auto;
+      padding:10px;
+      margin:10px;
+   
+      }
+  
+.container
+  h1
+    | MultiFactor Authentication
+  form.2fcForm
+    img(id="qr")
+    input(type='text' placeholder='Enter Your Code' id="token2FC")
+    input(type='submit')
+script.
+  var x = !{JSON.stringify(imgsrc)}  
+  const qr = document.getElementById("qr").src = x;
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+script.
+  var user = !{JSON.stringify(user)};
+<script src="./js/m2fc.js"></script>

@@ -1,0 +1,62 @@
+doctype html
+head
+  title Insgram Clone
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  meta(name='description' content='Vietgram, like Instagram but with Pho')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='css/styles.css')
+main#login
+  .login__column
+    img.login__phone(src='images/phoneImage.png')
+  .login__column
+    .login__box
+      img.login__logo(src='images/loginLogo.png')
+      form.login__form(action='/' method='post')
+        input(type='text' id="emailLogin" name='email' placeholder='Email' required='')
+        input(type='password' id="passwordLogin" name='password' placeholder='Password' required='')
+        input(type='submit' value='Log in')
+        //- span.validation Please Enter correct email address and password
+      span.login__divider or
+      a.login__link(href='/auth/google' id="googleLogin")
+        i.fa.fa-money
+        |                         Log in with Gmail
+      a.login__link.login__link--small(href='/forgetpassword') Forgot password
+    .login__box
+      span Don&apos;t have an account?
+      a(href='/signup') Sign up
+    .login__box--transparent
+      span Get the app.
+      .login__appstores
+        img.login__appstore(src='images/ios.png' alt='Apple appstore logo' title='Apple appstore logo')
+        img.login__appstore(src='images/android.png' alt='Android appstore logo' title='Android appstore logo')
+footer.footer
+  .footer__column
+    nav.footer__nav
+      ul.footer__list
+        li.footer__list-item
+          a.footer__link(href='#') About Us
+        li.footer__list-item
+          a.footer__link(href='#') Support
+        li.footer__list-item
+          a.footer__link(href='#') Blog
+        li.footer__list-item
+          a.footer__link(href='#') Press
+        li.footer__list-item
+          a.footer__link(href='#') Api
+        li.footer__list-item
+          a.footer__link(href='#') Jobs
+        li.footer__list-item
+          a.footer__link(href='#') Privacy
+        li.footer__list-item
+          a.footer__link(href='#') Terms
+        li.footer__list-item
+          a.footer__link(href='#') Directory
+        li.footer__list-item
+          a.footer__link(href='#') Language
+  .footer__column
+    span.footer__copyright &copy; 2020 Instgram Clone Copy Rights By #{user} As Backend Only
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+script(src='./js/login.js')
+

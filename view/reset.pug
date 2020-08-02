@@ -1,0 +1,54 @@
+html
+  head
+    style.
+      h2 {
+      text-align:center;
+      padding:20px
+      }
+      form  {
+      border:2px solid #EEE;
+      padding:80px;
+      height:400px;
+      width:400px;
+      margin:auto
+      }
+      form input {
+      padding:10px;
+      margin:10px;
+      background-color:#2ea44f;
+      display:block;
+      margin:12px auto;
+      color:white;
+      border-radius:10px;
+      }
+      form input[type="password"] {
+      color:black;
+      background-color:white;
+      }
+      form input[type="password"]:focus {
+      border-radius:10px;
+      }
+      form  span {
+      line-height: 1.5;
+      color: #24292e;
+      font-weight:bold;
+      }
+     
+  body
+    h2 Change Password
+    form.changeForm
+      .inputs
+        span
+          | Please Enter Your New Password
+          br
+        input(type='password' placeholder="Password" id="passwordChange")
+        input(type='password' placeholder="Password Confirmation" id="passwordConfirmationChange")
+        br
+        input(type='submit', value='Change Password')
+     
+script.
+  var token = !{JSON.stringify(token)}; //Studied later
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ 
+script(src='/js/reset.js')

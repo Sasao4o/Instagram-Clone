@@ -1,0 +1,135 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Profile | Vietgram
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='css/styles.css')
+script.
+ var user = !{JSON.stringify(user)};
+ var posts = !{JSON.stringify(posts)};
+
+#postCreation
+  form.edit-profile__form(action='' id="postForm" enctype="multipart/form-data")
+    .form__row
+      label.form__label(for='description') Post Description:
+      textarea(id ="des" name="description")
+    .form__row
+      label.form__label(for='img') Post Image:
+      input(type='file' name='img' id="postimg")
+      input(type='submit' value='Submit')
+
+nav.navigation
+  .navigation__column
+    a(href='home')
+      img(src='images/logo.png')
+  .navigation__column
+    i.fa.fa-search
+    input(type='text' placeholder='Search')
+  .navigation__column
+    ul.navigations__links
+      li.navigation__list-item
+        a.navigation__link(href='explore')
+          i.fa.fa-compass.fa-lg
+      li.navigation__list-item
+        a.navigation__link(href='#')
+          i.fa.fa-heart-o.fa-lg
+      li.navigation__list-item
+        a.navigation__link(href='profile')
+          i.fa.fa-user-o.fa-lg
+  button(id="logout") Log Out
+main#profile
+  header.profile__header
+    .profile__column
+      img(src=`images/users/${user.img}`)
+    .profile__column
+      .profile__title
+        h3.profile__username #{user.username}
+        a(href='editprofile') Edit profile
+        i.fa.fa-cog.fa-lg
+        i.fa.fa-plus 
+      ul.profile__stats
+        li.profile__stat
+          span.stat__number #{user.post.length}
+          |  posts
+        li.profile__stat
+          span.stat__number #{user.followers.length}
+          |  followers
+        li.profile__stat
+          span.stat__number #{user.following.length}
+          |  following
+      p.profile__bio
+        span.profile__full-name
+          | Nicol&aacute;s Serrano Ar&eacute;valo
+  section.profile__photos
+    .profile__photo
+      img(src='images/feedPhoto.jpg')
+      .profile__photo-overlay
+        span.overlay__item
+          i.fa.fa-heart
+          |                         486
+        span.overlay__item
+          i.fa.fa-comment
+          |                         344
+    .profile__photo
+      img(src='images/feedPhoto.jpg')
+      .profile__photo-overlay
+        span.overlay__item
+          i.fa.fa-heart
+          |                             486
+        span.overlay__item
+          i.fa.fa-comment
+          |                             344
+    .profile__photo
+      img(src='images/feedPhoto.jpg')
+      .profile__photo-overlay
+        span.overlay__item
+          i.fa.fa-heart
+          |                                 486
+        span.overlay__item
+          i.fa.fa-comment
+          |                                 344
+    .profile__photo
+      img(src='images/feedPhoto.jpg')
+      .profile__photo-overlay
+        span.overlay__item
+          i.fa.fa-heart
+          |                                     486
+        span.overlay__item
+          i.fa.fa-comment
+          |                                     344
+footer.footer
+  .footer__column
+    nav.footer__nav
+      ul.footer__list
+        li.footer__list-item
+          a.footer__link(href='#') About Us
+        li.footer__list-item
+          a.footer__link(href='#') Support
+        li.footer__list-item
+          a.footer__link(href='#') Blog
+        li.footer__list-item
+          a.footer__link(href='#') Press
+        li.footer__list-item
+          a.footer__link(href='#') Api
+        li.footer__list-item
+          a.footer__link(href='#') Jobs
+        li.footer__list-item
+          a.footer__link(href='#') Privacy
+        li.footer__list-item
+          a.footer__link(href='#') Terms
+        li.footer__list-item
+          a.footer__link(href='#') Directory
+        li.footer__list-item
+          a.footer__link(href='#') Language
+  .footer__column
+    span.footer__copyright &copy; 2017 Vietgram
+script.
+  var x = !{JSON.stringify(user.bio)}
+  document.querySelector("p.profile__bio").innerText += x;
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/profile.js"></script>
+<script src="./js/logout.js"></script>
+
+  //- document.querySelector("p.profile_bio").innerHTML += "<a href="#"/> serranoarevalo.com"

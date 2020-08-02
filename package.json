@@ -1,0 +1,37 @@
+
+{
+  "name": "instgram-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js", 
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "debug": "ndb vanilla.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25",
+    "multer": "^1.4.2",
+    "ndb": "^1.1.5",
+    "nodemailer": "^6.4.10",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "pug": "^3.0.0",
+    "qrcode": "^1.4.4",
+    "redis": "^3.0.2",
+    "sharp": "^0.25.4",
+    "speakeasy": "^2.0.0",
+    "validator": "^13.1.1",
+    "validator.js": "^2.0.4"
+  }
+}

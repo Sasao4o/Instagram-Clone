@@ -1,0 +1,104 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Edit Profile | Vietgram
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='css/styles.css')
+script. 
+ var selected = true;
+ var user = !{JSON.stringify(user)};
+
+  
+nav.navigation
+  .navigation__column
+    a(href='home')
+      img(src='images/logo.png')
+  .navigation__column
+    i.fa.fa-search
+    input(type='text' placeholder='Search')
+  .navigation__column
+    ul.navigations__links
+      li.navigation__list-item
+        a.navigation__link(href='explore')
+          i.fa.fa-compass.fa-lg
+      li.navigation__list-item
+        a.navigation__link(href='#')
+          i.fa.fa-heart-o.fa-lg
+      li.navigation__list-item
+        a.navigation__link(href='profile')
+          i.fa.fa-user-o.fa-lg
+main#edit-profile
+  .edit-profile__container
+    header.edit-profile__header
+      .edit-profile__avatar-container
+        img.edit-profile__avatar(src="./images/users/" + user.img)
+      h4.edit-profile__username serranoarevalo
+    form.edit-profile__form(action='' enctype="multipart/form-data")
+      //
+        <div class="form__row">
+        <label for="full-name" class="form__label">Name:</label>
+        <input id="full-name" type="text" class="form__input" />
+        </div>
+      .form__row
+        label.form__label(for='user-name') Username:
+        input#user-name.form__input(type='text' value= user.username disabled)
+      //
+        <div class="form__row">
+        <label for="website" class="form__label">Website:</label>
+        <input id="website" type="url" class="form__input" />
+        </div>
+      .form__row
+        label.form__label(for='bio') Bio:
+        textarea#bio #{user.bio}
+      .form__row
+        label.form__label(for='email') Email:
+        input#email.form__input(type='email' value=user.email)
+      .form__row 
+        label.form__label(for='image') pp:Eee
+        input(name="profileimg" type='file' value='Submit')
+        img(src= "./images/users/" + user.img id="profileimage") 
+      .form__row
+        label.form__label(for='gender') Gender:
+        select#gender
+         
+          option(value='male') Male
+          option(value='female') Female
+      input(type='submit' value='Submit')
+footer.footer
+  .footer__column
+    nav.footer__nav
+      ul.footer__list
+        li.footer__list-item
+          a.footer__link(href='#') About Us
+        li.footer__list-item
+          a.footer__link(href='#') Support
+        li.footer__list-item
+          a.footer__link(href='#') Blog
+        li.footer__list-item
+          a.footer__link(href='#') Press
+        li.footer__list-item
+          a.footer__link(href='#') Api
+        li.footer__list-item
+          a.footer__link(href='#') Jobs
+        li.footer__list-item
+          a.footer__link(href='#') Privacy
+        li.footer__list-item
+          a.footer__link(href='#') Terms
+        li.footer__list-item
+          a.footer__link(href='#') Directory
+        li.footer__list-item
+          a.footer__link(href='#') Language
+  .footer__column
+    span.footer__copyright &copy; 2017 Vietgram
+script.
+ const select = [...document.getElementById("gender").children];
+ if (user.gender == "female") { 
+ select[1].setAttribute("selected", "select") ;
+ }
+ else {
+ select[0].setAttribute("selected", "select") ;
+ }
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/editprofile.js"></script>
